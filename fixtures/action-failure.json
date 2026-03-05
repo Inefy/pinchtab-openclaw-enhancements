@@ -1,0 +1,13 @@
+{
+  "ok": false,
+  "action": "click",
+  "durationMs": 30121,
+  "retryable": true,
+  "reason": "intercepted_pointer_events",
+  "artifacts": {
+    "screenshot": "/tmp/fail.png",
+    "snapshot": "/tmp/fail.json",
+    "console": "/tmp/console.json",
+    "network": "/tmp/network.json"
+  }
+}

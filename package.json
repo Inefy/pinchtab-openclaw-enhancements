@@ -1,0 +1,9 @@
+{
+  "name": "pinchtab-openclaw-enhancements",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/validate-fixtures.mjs"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "action": "click",
+  "durationMs": 84,
+  "retryable": false,
+  "reason": null,
+  "artifacts": {
+    "screenshot": null,
+    "snapshot": null,
+    "console": null,
+    "network": null
+  }
+}

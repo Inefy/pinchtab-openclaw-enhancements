@@ -24,11 +24,16 @@ This repo tracks and prototypes those improvements.
 
 See `ROADMAP.md` and `SPEC.md`.
 
+## Reference artifacts added
+
+- `schemas/action-result.schema.json` — baseline result-envelope schema
+- `fixtures/action-success.json` / `fixtures/action-failure.json` — canonical examples
+- `tests/validate-fixtures.mjs` — lightweight schema-conformance harness
+
 ## Development
 
 ```bash
-# in this repo
-make lint || true
+npm test
 ```
 
 (Implementation code will be added incrementally as adapters/prototypes are built.)

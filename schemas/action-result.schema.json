@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Inefy/pinchtab-openclaw-enhancements/schemas/action-result.schema.json",
+  "title": "Action Result Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ok", "action", "durationMs", "retryable", "reason", "artifacts"],
+  "properties": {
+    "ok": { "type": "boolean" },
+    "action": { "type": "string", "minLength": 1 },
+    "durationMs": { "type": "integer", "minimum": 0 },
+    "retryable": { "type": "boolean" },
+    "reason": { "type": ["string", "null"] },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["screenshot", "snapshot", "console", "network"],
+      "properties": {
+        "screenshot": { "type": ["string", "null"] },
+        "snapshot": { "type": ["string", "null"] },
+        "console": { "type": ["string", "null"] },
+        "network": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
