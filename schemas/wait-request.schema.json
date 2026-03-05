@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Inefy/pinchtab-openclaw-enhancements/schemas/wait-request.schema.json",
+  "title": "waitFor Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "value", "timeoutMs"],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": ["visible", "attached", "hidden", "text", "url", "load-state"]
+    },
+    "value": { "type": "string", "minLength": 1 },
+    "timeoutMs": { "type": "integer", "minimum": 1 }
+  }
+}

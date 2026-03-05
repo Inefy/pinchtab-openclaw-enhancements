@@ -27,7 +27,11 @@ See `ROADMAP.md` and `SPEC.md`.
 ## Reference artifacts added
 
 - `schemas/action-result.schema.json` — baseline result-envelope schema
-- `fixtures/action-success.json` / `fixtures/action-failure.json` — canonical examples
+- `schemas/wait-request.schema.json` — wait primitive request contract
+- `schemas/debug-bundle.schema.json` — failure triage bundle contract
+- `fixtures/action-success.json` / `fixtures/action-failure.json` — canonical action results
+- `fixtures/wait-request.json` — canonical wait request
+- `fixtures/debug-bundle.json` — canonical debug bundle output
 - `tests/validate-fixtures.mjs` — lightweight schema-conformance harness
 
 ## Development

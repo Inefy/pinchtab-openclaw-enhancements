@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Inefy/pinchtab-openclaw-enhancements/schemas/debug-bundle.schema.json",
+  "title": "Debug Bundle Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ok", "bundleId", "generatedAt", "artifacts", "summary"],
+  "properties": {
+    "ok": { "type": "boolean" },
+    "bundleId": { "type": "string", "minLength": 1 },
+    "generatedAt": { "type": "string", "minLength": 1 },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["snapshot", "screenshot", "console", "network", "errors"],
+      "properties": {
+        "snapshot": { "type": ["string", "null"] },
+        "screenshot": { "type": ["string", "null"] },
+        "console": { "type": ["string", "null"] },
+        "network": { "type": ["string", "null"] },
+        "errors": { "type": ["string", "null"] }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["consoleCount", "networkCount", "errorCount"],
+      "properties": {
+        "consoleCount": { "type": "integer", "minimum": 0 },
+        "networkCount": { "type": "integer", "minimum": 0 },
+        "errorCount": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
